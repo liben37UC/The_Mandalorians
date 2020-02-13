@@ -69,15 +69,12 @@ for i in range(0,testdata.shape[0]):
 #Creating the Bag of Words Model 
 from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer(max_features = 6000)
-
 cv_fit = cv.fit(corpus_train)
-
-
 
 X_train = cv_fit.transform(corpus_train).toarray()
 y_train = traindata.iloc[:, 0].values
 
-cv_test = CountVectorizer(max_features = 6000)
+#cv_test = CountVectorizer(max_features = 6000)
 X_test = cv_fit.transform(corpus_test).toarray()
 
 
